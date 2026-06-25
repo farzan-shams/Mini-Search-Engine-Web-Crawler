@@ -4,15 +4,23 @@ A multi-threaded web crawler with full-text TF-IDF indexing and PageRank scoring
 
 # Features
 
-| **Multi-threading** | Configurable thread pool (default 8 threads) |
-| **BFS Crawling** | Breadth-first URL discovery up to configurable depth |
-| **robots.txt** | Fully compliant; per-domain disallow list cached in memory |
-| **Politeness** | Per-domain rate limiting (configurable delay) |
-| **HTML Parsing** | Regex-based link extraction + visible-text stripping |
-| **TF-IDF Index** | Term frequency–inverse document frequency scoring |
-| **PageRank** | Damping-factor 0.85, 20-iteration power method |
-| **Search** | Interactive CLI search ranked by TF-IDF × PageRank |
-| **JSON Export** | Full crawl index saved to `crawl_index.json` |
+**Multi-threading** -- Configurable thread pool (default 8 threads) 
+
+**BFS Crawling** -- Breadth-first URL discovery up to configurable depth 
+
+**robots.txt** -- Fully compliant; per-domain disallow list cached in memory 
+
+**Politeness** -- Per-domain rate limiting (configurable delay) 
+
+**HTML Parsing** -- Regex-based link extraction + visible-text stripping 
+
+**TF-IDF Index** -- Term frequency–inverse document frequency scoring 
+
+**PageRank** -- Damping-factor 0.85, 20-iteration power method 
+
+**Search** -- Interactive CLI search ranked by TF-IDF × PageRank 
+
+**JSON Export** -- Full crawl index saved to `crawl_index.json` 
 
 # Build
 
@@ -80,11 +88,16 @@ CrawlQueue (BFS)
 
 # Configuration (in code / CLI)
 
-| Parameter | Default | Description |
+Parameter -- Default -- Description 
 
-| `max_pages` | 200 | Stop after N pages indexed |
-| `max_threads` | 8 | Worker thread count |
-| `max_depth` | 3 | BFS depth limit from seed |
-| `timeout_sec` | 10 | HTTP request timeout |
-| `delay_ms` | 300 | Per-domain politeness delay (ms) |
-| `same_domain` | false | Restrict to seed domain only |
+`max_pages` -- 200 -- Stop after N pages indexed 
+
+`max_threads` -- 8 -- Worker thread count 
+
+`max_depth` -- 3 -- BFS depth limit from seed 
+
+`timeout_sec` -- 10 -- HTTP request timeout 
+
+`delay_ms` -- 300 -- Per-domain politeness delay (ms) 
+
+`same_domain` -- false -- Restrict to seed domain only 
